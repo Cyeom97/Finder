@@ -56,3 +56,8 @@
     height: 30px;
     margin: 0 5px 10px 5px;
 }
+
+/* homepage search bar */
+.input-control{
+    min-width: 320px;
+}

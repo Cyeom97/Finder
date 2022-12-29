@@ -10,6 +10,28 @@ const HomePage = () => {
           <p>API</p>
         </div>
       </div>
+      <div className="field has-addons">
+        <p className="control">
+          <button className="button is-static is-medium">Search</button>
+        </p>
+        <p className="control">
+          <input
+            className="input is-medium input-control"
+            type="text"
+            placeholder="ramen, nightclubs, nail salons"
+          />
+        </p>
+        <p className="control">
+          <button className="button is-static is-medium">Where</button>
+        </p>
+        <p className="control">
+          <input
+            className="input is-medium"
+            type="text"
+            placeholder="Location"
+          />
+        </p>
+      </div>
     </div>
   )
 }
