@@ -1,14 +1,16 @@
 import logo from '../assets/yelp-logo-270.png'
 import '../App.css'
+import styles from './HomePage.module.css'
 import { SearchSuggestions } from '../components/searchsuggestions/SearchSuggestions'
+
 const HomePage = () => {
   return (
-    <div>
-      <div className="titles">
-        <h1 className="home-title">Finder</h1>
-        <div className="home-yelp">
+    <div className={styles['search-area']}>
+      <div className={styles['titles']}>
+        <h1 className={styles['home-title']}>Finder</h1>
+        <div className={styles['home-yelp']}>
           <p>A</p>
-          <img src={logo} className="home-logo" alt="logo"></img>
+          <img src={logo} className={styles['home-logo']} alt="logo"></img>
           <p>API</p>
         </div>
       </div>
@@ -18,7 +20,7 @@ const HomePage = () => {
         </p>
         <p className="control">
           <input
-            className="input is-medium input-control"
+            className={`input is-medium ${styles['input-control']}`}
             type="text"
             placeholder="ramen, nightclubs, nail salons"
           />
@@ -33,8 +35,8 @@ const HomePage = () => {
             placeholder="Location"
           />
         </p>
-        <div className="button is-medium" id="search-button">
-          <span className="icon is-small" id="icon">
+        <div className="button is-medium" id={styles['search-button']}>
+          <span className="icon is-small" id={styles['icon']}>
             <i className="fas fa-search"></i>
           </span>
         </div>

@@ -1,22 +1,25 @@
 import logo from '../assets/yelp-logo-270.png'
+import React from 'react'
 
-const Nav = () => {
+export function Nav () {
     return (
-        <div className="top-nav">
-            <div className="nav-left">
-                <span>Write a Review</span>
-                <span>Events</span>
-            </div>
-            <div className="nav-right">
-                <div className='yelp'>
-                    <img src={logo} className="nav-logo" alt="logo"></img>
-                    <p>API</p>
+        
+            <div className="top-nav">
+                <div className="nav-left">
+                    <span>Write a Review</span>
+                    <span>Events</span>
                 </div>
-                <span>Login</span>
-                <button className="button">Sign Up</button>
+                <div className="nav-right">
+                    <div className='yelp'>
+                        <img src={logo} className="nav-logo" alt="logo"></img>
+                        <p>API</p>
+                    </div>
+                    <span>Login</span>
+                    <button className="button">Sign Up</button>
+                </div>
             </div>
-        </div>
+     
+        
     )
 }
 
-export default Nav
