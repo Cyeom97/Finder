@@ -2,6 +2,16 @@
     --element-spacing: 1.5rem;
 }
 
+#root{
+    height: 100%;
+}
+
+.body{
+    height: 100%;
+}
+.main{
+    height: 100%;
+}
 
 .top-nav{
     display: flex;

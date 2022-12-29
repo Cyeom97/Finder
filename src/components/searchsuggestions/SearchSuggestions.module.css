@@ -1,9 +1,12 @@
 .suggestions{
     display: flex;
+    margin-top: 1rem;
+    color: #23D3D3;
 }
 
 .suggestion {
     font-size: .75rem;
     margin-left: 4px;
     margin-right: 2.5rem;
+    
 }

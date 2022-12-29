@@ -5,8 +5,8 @@ import { Search } from './Search/Search'
 import './App.css'
 function App() {
   return (
-    <div>
-      <main>
+    <div className="body">
+      <main className="main">
         <Routes>
           <Route path="/search" element={<Search />} />
           <Route path="/" element={<HomePage />} />
