@@ -1,5 +1,6 @@
 import logo from '../assets/yelp-logo-270.png'
 import '../App.css'
+import { SearchSuggestions } from '../components/searchsuggestions/SearchSuggestions'
 const HomePage = () => {
   return (
     <div>
@@ -38,6 +39,7 @@ const HomePage = () => {
           </span>
         </div>
       </div>
+      <SearchSuggestions />
     </div>
   )
 }
