@@ -61,3 +61,14 @@
 .input-control{
     min-width: 320px;
 }
+
+#search-button{
+    background-color: #bd1f1f;
+    border: none;
+}
+
+
+
+#icon {
+    color: white;
+}

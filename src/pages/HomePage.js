@@ -1,4 +1,5 @@
 import logo from '../assets/yelp-logo-270.png'
+import '../App.css'
 const HomePage = () => {
   return (
     <div>
@@ -31,6 +32,11 @@ const HomePage = () => {
             placeholder="Location"
           />
         </p>
+        <div className="button is-medium" id="search-button">
+          <span className="icon is-small" id="icon">
+            <i className="fas fa-search"></i>
+          </span>
+        </div>
       </div>
     </div>
   )
