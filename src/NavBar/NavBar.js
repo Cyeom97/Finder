@@ -6,10 +6,10 @@ import { SearchBar } from '../SearchBar/SearchBar'
 export function NavBar() {
   return (
     <div>
-      <div className={styles['my-logo']}>
+      <div className={styles['nav-bar']}>
         <h1 className={styles['my-title']}>Finder</h1>
         <i class="fa-brands fa-yelp fa-2xl" id={styles['logo']}></i>
-        <SearchBar />
+        <SearchBar small />
       </div>
     </div>
   )
