@@ -8,7 +8,7 @@ export function NavBar() {
     <div>
       <div className={styles['nav-bar']}>
         <h1 className={styles['my-title']}>Finder</h1>
-        <i class="fa-brands fa-yelp fa-2xl" id={styles['logo']}></i>
+        <i className="fa-brands fa-yelp fa-2xl" id={styles['logo']}></i>
         <SearchBar small />
       </div>
     </div>
