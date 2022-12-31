@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavBar } from '../NavBar/NavBar'
 import { SubNav } from '../NavBar/SubNav/SubNav'
+import { SearchResults } from './SearchResults/SearchResults'
 import { SearchResultSummary } from './SearchResultSummary/SearchResultSummary'
 
 export function Search() {
@@ -9,6 +10,7 @@ export function Search() {
       <NavBar />
       <SubNav />
       <SearchResultSummary />
+      <SearchResults />
     </div>
   )
 }
