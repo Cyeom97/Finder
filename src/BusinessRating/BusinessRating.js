@@ -12,6 +12,7 @@ export function BusinessRating() {
         readonly
         initialRating={3}
       />
+      <p>724 Reviews</p>
     </div>
   )
 }
