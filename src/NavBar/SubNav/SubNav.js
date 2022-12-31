@@ -1,8 +1,8 @@
 import React from 'react'
-import { SubNavItem } from './SubNavItem/SubNavItem'
+import SubNavItem from './SubNavItem/SubNavItem'
 import styles from './SubNav.module.css'
 
-export function SubNav() {
+const SubNav = () => {
   return (
     <div className={styles.container}>
       <div className={styles['sub-nav']}>
@@ -24,3 +24,4 @@ export function SubNav() {
     </div>
   )
 }
+export default SubNav

@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './NavBar.module.css'
 // import logo from '../assets/yelp-logo-270.png'
-import { SearchBar } from '../SearchBar/SearchBar'
+import SearchBar from '../SearchBar/SearchBar'
 
-export function NavBar() {
+const NavBar = () => {
   return (
     <div>
       <div className={styles['nav-bar']}>
@@ -14,3 +14,5 @@ export function NavBar() {
     </div>
   )
 }
+
+export default NavBar

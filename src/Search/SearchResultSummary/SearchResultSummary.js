@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './SearchResultSummary.module.css'
 
-export function SearchResultSummary() {
+const SearchResultSummary = () => {
   return (
     <div className={styles.container}>
       <div className={styles['search-summary']}>
@@ -39,3 +39,4 @@ export function SearchResultSummary() {
     </div>
   )
 }
+export default SearchResultSummary

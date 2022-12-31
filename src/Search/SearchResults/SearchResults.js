@@ -1,8 +1,8 @@
 import React from 'react'
-import { SearchResult } from './SearchResult/SearchResult'
+import SearchResult from './SearchResult/SearchResult'
 import styles from './SearchResults.module.css'
 
-export function SearchResults() {
+const SearchResults = () => {
   return (
     <div className={styles['search-results']}>
       <SearchResult />
@@ -10,3 +10,4 @@ export function SearchResults() {
     </div>
   )
 }
+export default SearchResults

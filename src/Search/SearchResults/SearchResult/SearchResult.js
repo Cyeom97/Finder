@@ -1,8 +1,8 @@
 import React from 'react'
-import { BusinessRating } from '../../../BusinessRating/BusinessRating'
+import BusinessRating from '../../../BusinessRating/BusinessRating'
 import styles from './SearchResult.module.css'
 
-export function SearchResult() {
+const SearchResult = () => {
   return (
     <div className={styles['search-result']}>
       <img
@@ -27,3 +27,4 @@ export function SearchResult() {
     </div>
   )
 }
+export default SearchResult

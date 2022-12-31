@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './SearchSuggestions.module.css'
 
-export function SearchSuggestions() {
+const SearchSuggestions = () => {
   return (
     <div className={styles.suggestions}>
       <span className="icon is-small">
@@ -23,3 +23,4 @@ export function SearchSuggestions() {
     </div>
   )
 }
+export default SearchSuggestions

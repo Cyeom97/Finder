@@ -1,7 +1,7 @@
 import logo from '../assets/yelp-logo-270.png'
 import React from 'react'
 
-export function Nav () {
+const Nav = () => {
     return (
         
             <div className="top-nav">
@@ -22,4 +22,4 @@ export function Nav () {
         
     )
 }
-
+export default Nav

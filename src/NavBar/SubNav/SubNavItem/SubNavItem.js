@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './SubNavItem.module.css'
 
-export function SubNavItem(props) {
+const SubNavItem = (props) => {
   const borderClass = props.showRightBorder ? styles['right-border'] : ''
   return (
     <div className="dropdown is-hoverable">
@@ -33,3 +33,4 @@ export function SubNavItem(props) {
     </div>
   )
 }
+export default SubNavItem
