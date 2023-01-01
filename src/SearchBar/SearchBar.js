@@ -13,6 +13,9 @@ const SearchBar = (props) => {
   }
 
   const submit = (e) => {
+    if (typeof props.search === 'function') {
+      props.search(term, location)
+    }
     console.log(term, location)
     e.preventDefault()
   }

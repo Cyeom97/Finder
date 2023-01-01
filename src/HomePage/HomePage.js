@@ -3,8 +3,18 @@ import '../App.css'
 import styles from './HomePage.module.css'
 import SearchSuggestions from '../components/searchsuggestions/SearchSuggestions'
 import SearchBar from '../SearchBar/SearchBar'
+import { useNavigate } from 'react-router-dom'
 
 const HomePage = () => {
+  let navigate = useNavigate()
+
+  const search = (term, location) => {
+    const urlEncodedTerm = encodeURI(term)
+    const urlEncodedLocation = encodeURI(location)
+    navigate(
+      `/search?find_desc=${urlEncodedTerm}&find_loc=${urlEncodedLocation}`
+    )
+  }
   return (
     <div className={styles['body']}>
       <div className={styles['content']}>
@@ -17,7 +27,7 @@ const HomePage = () => {
               <p>API</p>
             </div>
           </div>
-          <SearchBar />
+          <SearchBar search={search} />
           <SearchSuggestions />
         </div>
       </div>

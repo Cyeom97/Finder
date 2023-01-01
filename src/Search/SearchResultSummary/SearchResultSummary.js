@@ -17,7 +17,7 @@ const SearchResultSummary = () => {
           </span>
           <span>All filters</span>
         </button>
-        <div class="buttons has-addons">
+        <div className="buttons has-addons">
           <button className="button">$</button>
           <button className="button">$$</button>
           <button className="button">$$$</button>
