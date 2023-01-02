@@ -11,9 +11,7 @@ const HomePage = () => {
   const search = (term, location) => {
     const urlEncodedTerm = encodeURI(term)
     const urlEncodedLocation = encodeURI(location)
-    navigate(
-      `/search?find_desc=${urlEncodedTerm}&find_loc=${urlEncodedLocation}`
-    )
+    navigate(`/search?term=${urlEncodedTerm}&location=${urlEncodedLocation}`)
   }
   return (
     <div className={styles['body']}>

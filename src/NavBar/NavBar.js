@@ -4,7 +4,7 @@ import styles from './NavBar.module.css'
 import SearchBar from '../SearchBar/SearchBar'
 import { Link } from 'react-router-dom'
 
-const NavBar = () => {
+const NavBar = (props) => {
   return (
     <div>
       <div className={styles['nav-bar']}>
@@ -12,7 +12,7 @@ const NavBar = () => {
         <Link to="/">
           <i className="fa-brands fa-yelp fa-2xl" id={styles['logo']}></i>
         </Link>
-        <SearchBar small />
+        <SearchBar small term={props.term} location={props.location} />
       </div>
     </div>
   )

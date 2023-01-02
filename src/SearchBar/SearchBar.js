@@ -32,6 +32,7 @@ const SearchBar = (props) => {
             className={`input ${smallClass} ${styles['input-control']}`}
             onChange={changeTerm}
             type="text"
+            value={term}
             placeholder="ramen, nightclubs, nail salons"
           />
         </p>
@@ -43,6 +44,7 @@ const SearchBar = (props) => {
             className={`input ${smallClass}`}
             onChange={changeLocation}
             type="text"
+            value={location}
             placeholder="Location"
           />
         </p>
