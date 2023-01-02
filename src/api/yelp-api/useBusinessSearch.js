@@ -10,7 +10,7 @@ const useBusinessSearch = (term, location) => {
     setBusinesses([])
     const apiCall = async () => {
       try {
-        const rawData = await api.get('./businesses/search', searchParams)
+        const rawData = await api.get('/businesses/search', searchParams)
         const response = await rawData.json()
         setBusinesses(response.businesses)
         setResults(response.total)

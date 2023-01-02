@@ -4,18 +4,21 @@ import SubNav from '../NavBar/SubNav/SubNav'
 import SearchResults from './SearchResults/SearchResults'
 import SearchResultSummary from './SearchResultSummary/SearchResultSummary'
 import { useLocation } from 'react-router-dom'
+import useBusinessSearch from '../api/yelp-api/useBusinessSearch'
 
 const Search = () => {
   const search = useLocation().search
   const term = new URLSearchParams(search).get('term')
   const location = new URLSearchParams(search).get('location')
+  const [businesses, results, searchParams, setSearchParams] =
+    useBusinessSearch(term, location)
 
   return (
     <div>
       <NavBar term={term} location={location} />
       <SubNav />
       <SearchResultSummary term={term} location={location} />
-      <SearchResults />
+      <SearchResults businesses={businesses} />
     </div>
   )
 }
