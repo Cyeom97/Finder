@@ -12,7 +12,12 @@ const NavBar = (props) => {
         <Link to="/">
           <i className="fa-brands fa-yelp fa-2xl" id={styles['logo']}></i>
         </Link>
-        <SearchBar small term={props.term} location={props.location} />
+        <SearchBar
+          small
+          term={props.term}
+          location={props.location}
+          search={props.search}
+        />
       </div>
     </div>
   )

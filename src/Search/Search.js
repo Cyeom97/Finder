@@ -7,17 +7,29 @@ import { useLocation } from 'react-router-dom'
 import useBusinessSearch from '../api/yelp-api/useBusinessSearch'
 
 const Search = () => {
-  const search = useLocation().search
-  const term = new URLSearchParams(search).get('term')
-  const location = new URLSearchParams(search).get('location')
-  const [businesses, results, searchParams, setSearchParams] =
-    useBusinessSearch(term, location)
+  const searching = useLocation().search
+  const term = new URLSearchParams(searching).get('term')
+  const location = new URLSearchParams(searching).get('location')
+  const [businesses, results, searchParams, callSearch] = useBusinessSearch(
+    term,
+    location
+  )
+
+  const search = (term, location) => {
+    console.log(`I am called`)
+    callSearch({ term, location })
+  }
 
   return (
     <div>
-      <NavBar term={term} location={location} />
+      <NavBar term={term} location={location} search={search} />
       <SubNav />
-      <SearchResultSummary term={term} location={location} />
+      <SearchResultSummary
+        term={searchParams.term}
+        location={searchParams.location}
+        results={results}
+        shownResults={businesses ? businesses.length : 0}
+      />
       <SearchResults businesses={businesses} />
     </div>
   )
