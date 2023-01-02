@@ -5,7 +5,7 @@ const BusinessRating = (props) => {
   return (
     <div className={styles.rating}>
       <p>
-        {props.rating} <i class="fa-solid fa-star"></i>
+        {props.rating} <i className="fa-solid fa-star"></i>
       </p>
       <p>{props.reviewCount} Reviews</p>
     </div>
