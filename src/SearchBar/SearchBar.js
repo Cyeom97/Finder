@@ -41,7 +41,7 @@ const SearchBar = (props) => {
         </div>
         <p className="control">
           <input
-            className={`input ${smallClass}`}
+            className={`input ${smallClass} ${styles['input-control']}`}
             onChange={changeLocation}
             type="text"
             value={location}
