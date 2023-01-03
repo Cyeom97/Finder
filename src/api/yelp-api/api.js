@@ -6,7 +6,7 @@ export function get(path, queryParams) {
   return fetch(`${API_BASE_URL}${path}?${query}`, {
     headers: {
       Authorization: `Bearer ${API_KEY}`,
-      Origin: 'localhost',
+      Origin: 'finder-project.surge.sh',
       withCredentials: true
     }
   })
