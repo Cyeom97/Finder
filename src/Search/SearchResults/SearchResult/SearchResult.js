@@ -19,6 +19,7 @@ const SearchResult = (props) => {
   const addressLines = business.location.display_address.map((addressLine) => (
     <p key={business.id + addressLine}>{addressLine}</p>
   ))
+
   return (
     <div className={styles['search-result']}>
       <img

@@ -10,6 +10,15 @@ const SearchResultSummary = (props) => {
       </p>
     )
   }
+
+  const filterOpen = () => {
+    if (props.isOpen) {
+      props.setIsOpen(false)
+    } else {
+      props.setIsOpen(true)
+    }
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles['search-summary']}>
@@ -31,17 +40,11 @@ const SearchResultSummary = (props) => {
           <button className="button">$$$</button>
           <button className="button">$$$$</button>
         </div>
-        <button className="button">
+        <button className="button" onClick={filterOpen}>
           <span className="icon">
             <i className="fas fa-clock"></i>
           </span>
-          <span>Open Now</span>
-        </button>
-        <button className="button">
-          <span className="icon">
-            <i className="fas fa-dollar-sign"></i>
-          </span>
-          <span>Cashback</span>
+          <span>{props.isOpen === false ? 'Open Now' : 'All Results'}</span>
         </button>
       </div>
     </div>
