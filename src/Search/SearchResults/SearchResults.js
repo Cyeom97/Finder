@@ -5,10 +5,9 @@ import Loading from '../../Loading/Loading'
 
 const SearchResults = (props) => {
   let results = <Loading />
-  if (props.businesses && props.businesses.length) {
-    results = props.businesses.map((b) => (
-      <SearchResult key={b.id} businesses={b} />
-    ))
+  let biz = props.businesses
+  if (biz && biz.length) {
+    results = biz.map((b) => <SearchResult key={b.id} businesses={b} />)
   }
 
   return <div className={styles['search-results']}>{results}</div>

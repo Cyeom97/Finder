@@ -19,6 +19,14 @@ const SearchResultSummary = (props) => {
     }
   }
 
+  const filterTwoDollars = () => {
+    if (props.twoDollars) {
+      props.setTwoDollars(false)
+    } else {
+      props.setTwoDollars(true)
+    }
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles['search-summary']}>
@@ -36,7 +44,9 @@ const SearchResultSummary = (props) => {
         </button>
         <div className="buttons has-addons">
           <button className="button">$</button>
-          <button className="button">$$</button>
+          <button className="button" onClick={filterTwoDollars}>
+            $$
+          </button>
           <button className="button">$$$</button>
           <button className="button">$$$$</button>
         </div>

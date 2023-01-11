@@ -12,14 +12,6 @@ const SubNav = () => {
           <SubNavItem label="Auto Services" icon="fa-car" />
           <SubNavItem label="More" icon="fa-info-circle" showRightBorder />
         </div>
-        <div>
-          <button className={`button ${styles['subnav-button']}`}>
-            <span className="icon">
-              <i className="fas fa-pen"></i>
-            </span>
-            <span>Write a Review</span>
-          </button>
-        </div>
       </div>
     </div>
   )

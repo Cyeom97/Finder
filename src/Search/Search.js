@@ -13,6 +13,9 @@ const Search = () => {
   const term = new URLSearchParams(searching).get('term')
   const location = new URLSearchParams(searching).get('location')
   const [isOpen, setIsOpen] = useState(false)
+  const [twoDollars, setTwoDollars] = useState(false)
+  const [filterPrice, setFilteredPrice] = useState([])
+
   const [businesses, results, searchParams, callSearch] = useBusinessSearch(
     term,
     location
@@ -33,6 +36,14 @@ const Search = () => {
     }
   }
 
+  const filterTwoDollars = () => {
+    if (twoDollars) {
+      setTwoDollars(false)
+    } else {
+      setTwoDollars(true)
+    }
+  }
+
   return (
     <div>
       <NavBar term={term} location={location} search={search} />
@@ -45,9 +56,14 @@ const Search = () => {
         businesses={businesses}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
-        filterOpen={filterOpen}
+        twoDollars={twoDollars}
+        setTwoDollars={setTwoDollars}
       />
-      <SearchResults businesses={businesses} />
+      <SearchResults
+        businesses={businesses}
+        isOpen={isOpen}
+        twoDollars={twoDollars}
+      />
     </div>
   )
 }
