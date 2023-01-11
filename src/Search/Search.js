@@ -14,8 +14,6 @@ const Search = () => {
   const location = new URLSearchParams(searching).get('location')
   const [isOpen, setIsOpen] = useState(false)
   const [twoDollars, setTwoDollars] = useState(false)
-  const [filterPrice, setFilteredPrice] = useState([])
-
   const [businesses, results, searchParams, callSearch] = useBusinessSearch(
     term,
     location

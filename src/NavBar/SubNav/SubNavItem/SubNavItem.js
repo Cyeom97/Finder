@@ -23,10 +23,26 @@ const SubNavItem = (props) => {
       <div className="dropdown-menu" id="dropdown-menu4" role="menu">
         <div className="dropdown-content">
           <div className="dropdown-item">
-            <p>
-              You can insert <strong>any type of content</strong> within the
-              dropdown menu.
-            </p>
+            {props.label === 'Restaurant' ? (
+              <div>
+                <div className={`${styles['drops']}`}>
+                  <p>
+                    <i className="fa-solid fa-bicycle"></i> Delivery
+                  </p>
+                  <p>
+                    <i className="fa-solid fa-burger"></i> Burgers
+                  </p>
+                </div>
+                <div className={`${styles['drops']}`}>
+                  <p>
+                    <i className="fa-solid fa-burrito"></i> Mexican
+                  </p>
+                  <p>
+                    <i className="fa-solid fa-shrimp"></i> Thai
+                  </p>
+                </div>
+              </div>
+            ) : null}
           </div>
         </div>
       </div>
